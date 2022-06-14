@@ -23,7 +23,7 @@ function BlogArticle(props){
   
   
   const fetchData= async()=>{
-    const response= await fetch(`http://localhost:3001/blog/id?blog_id=${thisBid}`);
+    const response= await fetch(`https://hosue-coffee-backend.herokuapp.com/blog/id?blog_id=${thisBid}`);
     const results=await response.json(); 
     setDatas(results);
 
