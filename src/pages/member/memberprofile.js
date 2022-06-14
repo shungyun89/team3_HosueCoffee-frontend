@@ -21,15 +21,15 @@ function Memberprofile(props){
       }
     console.log(member_photo)
     if(!auth){
-        window.location.replace("http://localhost:3000/member");
+        window.location.replace("https://hosue-coffee-backend.herokuapp.com/member");
     }if(!dataCheck){
-        window.location.replace("http://localhost:3000/member/NewData");
+        window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
 
     }else{
 
 
     // if(dataCheck!=true){
-    //     window.location.replace("http://localhost:3000/member/NewData");
+    //     window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     // }
   
  

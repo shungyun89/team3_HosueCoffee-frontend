@@ -84,7 +84,7 @@ function Pay3(){
                 const pointss = await fetch(`${process.env.REACT_APP_API_URL}/shoporder/Newpoint?member_point=${Myp+Newp}&member_id=${thisMemberid}`)
                 localStorage.setItem("point", Myp+Newp);
 
-                const member_orderlist="http://localhost:3000/member/Order/"+o_id
+                const member_orderlist="https://hosue-coffee-backend.herokuapp.com/member/Order/"+o_id
                 window.location.replace(member_orderlist)
               }else{
                 alert ("付款失敗")

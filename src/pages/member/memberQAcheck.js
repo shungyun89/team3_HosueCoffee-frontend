@@ -8,7 +8,7 @@ import './memberQAcheck.css'
    const{auth}=props
    const {dataCheck}=props;
     if(!dataCheck){
-        window.location.replace("http://localhost:3000/member/NewData");
+        window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     }
    
   const params = useParams()

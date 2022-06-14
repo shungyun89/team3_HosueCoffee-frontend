@@ -8,9 +8,9 @@ function MemberPassword(props){
   const{auth}=props;
     const {dataCheck}=props;
     if(!auth){
-      window.location.replace("http://localhost:3000/member")
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member")
     }if(!dataCheck){
-      window.location.replace("http://localhost:3000/member/NewData");
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     }
   const account=localStorage.getItem("account");
   const [member_photo,setmember_photo]=useState(localStorage.getItem("photo"))
@@ -90,7 +90,7 @@ function MemberPassword(props){
     // const results = await response.json();
     // console.log(results);
     alert('成功修改');
-    window.location.replace("http://localhost:3000/member/profile");
+    window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/profile");
   }else{
     if(passwordMessage != '舊密碼正確'){
       document.querySelector('.passwordMessageRed').style.color="red"

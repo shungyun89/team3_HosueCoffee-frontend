@@ -9,7 +9,7 @@ import { check } from 'prettier';
 function MemberNewData(props){
   const{auth}=props;
     if(!auth){
-      window.location.replace("http://localhost:3000/member")
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member")
     }
   var today = new Date();
   var dd = today.getDate();
@@ -136,7 +136,7 @@ function MemberNewData(props){
           localStorage.setItem("photo", UPImg);
           localStorage.setItem("dataCheck", "資料完整");
           alert("資料新增成功")
-          window.location.replace("http://localhost:3000/member/profile");
+          window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/profile");
         }else {if(nameMessage!="感謝填寫姓名"){
           document.querySelector(".NewName").style.color="red";
 

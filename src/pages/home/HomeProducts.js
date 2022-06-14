@@ -59,7 +59,7 @@ function homeProducts(props) {
                         data-aos-easing="linear"
                         data-aos-duration="1500"
                         onClick={()=>{
-                            window.location.replace("http://localhost:3000/shop/ProductDetail/200001")
+                            window.location.replace("https://hosue-coffee-backend.herokuapp.com/shop/ProductDetail/200001")
                         }}>
                         <img className="scrollProduct1" src={CoffeeBagBlack} alt="" />
                         <div className="productdetail">
@@ -71,7 +71,7 @@ function homeProducts(props) {
                     </div>
                     <div className="productscroll"
                     onClick={()=>{
-                            window.location.replace("http://localhost:3000/shop/ProductDetail/200005")
+                            window.location.replace("https://hosue-coffee-backend.herokuapp.com/shop/ProductDetail/200005")
                         }}>
                         <img className="scrollProduct1" src={CoffeeBagPurple} alt="" />
                         <div className="productdetail">
@@ -83,7 +83,7 @@ function homeProducts(props) {
                     </div>
 
                     <div className="productscroll" onClick={()=>{
-                            window.location.replace("http://localhost:3000/shop/ProductDetail/200003")
+                            window.location.replace("https://hosue-coffee-backend.herokuapp.com/shop/ProductDetail/200003")
                         }}>
                         <img className="scrollProduct1" src={CoffeeBagPink} alt="" />
                         <div className="productdetail">
@@ -94,7 +94,7 @@ function homeProducts(props) {
                         </div>
                     </div>
                     <div className="productscroll" onClick={()=>{
-                            window.location.replace("http://localhost:3000/shop/ProductDetail/200002")
+                            window.location.replace("https://hosue-coffee-backend.herokuapp.com/shop/ProductDetail/200002")
                         }}>
                         <img className="scrollProduct1" src={CoffeeBagWhite} alt="" />
                         <div className="productdetail">
@@ -105,7 +105,7 @@ function homeProducts(props) {
                         </div>
                     </div>
                     <div className="productscroll" onClick={()=>{
-                            window.location.replace("http://localhost:3000/shop/ProductDetail/200004")
+                            window.location.replace("https://hosue-coffee-backend.herokuapp.com/shop/ProductDetail/200004")
                         }}>
                         <img className="scrollProduct1" src={CoffeeBagYellow} alt="" />
                         <div className="productdetail">

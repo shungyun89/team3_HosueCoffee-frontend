@@ -30,7 +30,7 @@ function Pay1(props){
 
     //回去繼續購物
     const keepshopping = ()=>{
-        window.location.assign("http://localhost:3000/shop")
+        window.location.assign("https://hosue-coffee-backend.herokuapp.com/shop")
          }  
 
     //按下一步跳pay2
@@ -95,7 +95,7 @@ function Pay1(props){
                 document.querySelector('.payTwo').style.display="block"
                 document.querySelector('.payOne').style.display="none"
                 window.scroll(0,0)
-                const p3="http://localhost:3000/shoppingCart/pay3/"+thisoid
+                const p3="https://hosue-coffee-backend.herokuapp.com/shoppingCart/pay3/"+thisoid
                 // console.log(odweb);
                 localStorage.removeItem("sCarts")
                 window.location.replace(p3)

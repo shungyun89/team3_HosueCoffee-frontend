@@ -19,9 +19,9 @@ function MemberOrder(props){
     const internationalNumberFormat = new Intl.NumberFormat('en-US')
     
     if(!auth){
-      window.location.replace("http://localhost:3000/member")
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member")
     }if(!dataCheck){
-      window.location.replace("http://localhost:3000/member/NewData");
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     }
 
     
@@ -85,7 +85,7 @@ function MemberOrder(props){
                         <h4 className="col-3None gopay">{order_condition}</h4> 
                         {state?<></>:<button className="coffeeLightBtn gopay gopayBTN" 
                             onClick={()=>{
-                                const p3="http://localhost:3000/shoppingCart/pay3/"+thiso_id
+                                const p3="https://hosue-coffee-backend.herokuapp.com/shoppingCart/pay3/"+thiso_id
 
                                 window.location.replace(p3)
                              

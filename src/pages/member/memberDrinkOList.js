@@ -7,9 +7,9 @@ function MemberDrinkOList(props){
     const{auth}=props;
     const {dataCheck}=props;
     if(!auth){
-      window.location.replace("http://localhost:3000/member")
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member")
     }if(!dataCheck){
-      window.location.replace("http://localhost:3000/member/NewData");
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     }
     return(
         <>

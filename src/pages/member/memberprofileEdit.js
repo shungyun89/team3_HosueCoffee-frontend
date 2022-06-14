@@ -13,9 +13,9 @@ function MemberprofileEdit(props){
     console.log(!dataCheck)
     console.log("---------")
     if(!auth){
-      window.location.replace("http://localhost:3000/member")
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member")
     }if(!dataCheck){
-      window.location.replace("http://localhost:3000/member/NewData");
+      window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
     }
   const thismemberid=localStorage.getItem("true");
   const account=localStorage.getItem("account");
@@ -74,7 +74,7 @@ function MemberprofileEdit(props){
           localStorage.setItem("address", UPaddress);
           localStorage.setItem("photo", UPImg);
           alert("資料修改成功")
-          window.location.replace("http://localhost:3000/member/profile");
+          window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/profile");
         }if(UPPT!=1){
           alert("請點擊上傳");
 

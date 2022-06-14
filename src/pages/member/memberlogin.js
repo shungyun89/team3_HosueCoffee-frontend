@@ -27,7 +27,7 @@ function MemberLogin(props){
     //^設定註冊時的提示訊息^
 
     if(auth){
-        window.location.replace("http://localhost:3000/member/profile")
+        window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/profile")
         //^如果已經登入，轉向個人基本資料^
     }else{
     
@@ -220,7 +220,7 @@ function MemberLogin(props){
                     alert('成功登入');
                     // setDataCheck(!dataCheck) 這不需要因為它本身useState是由 localStorage去驗證
                     
-                    window.location.replace("http://localhost:3000/member/profile");
+                    window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/profile");
                     //轉向會員基本資料頁面
             }else{
             //如果沒有基本資料
@@ -228,7 +228,7 @@ function MemberLogin(props){
                 //清除localStorage內的dataCheck
                 alert('成功登入 但基本資料尚未完整');
                 //跳出訊息
-                window.location.replace("http://localhost:3000/member/NewData");
+                window.location.replace("https://hosue-coffee-backend.herokuapp.com/member/NewData");
                 //轉向填寫資料頁面
                 }
             }else{
