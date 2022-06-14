@@ -8,7 +8,7 @@ const MenuCard = (props) => {
 
     const localFavDatas = JSON.parse(localStorage.getItem('favourite'))
     
-    const thisURL=window.location.href
+    const thisURL=location.href
     // 異步回調
     useEffect(() => {},[setdrinkId])
 
