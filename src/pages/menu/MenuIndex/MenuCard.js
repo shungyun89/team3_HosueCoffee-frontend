@@ -11,8 +11,8 @@ const MenuCard = (props) => {
     const thisURL=window.location.href
     // 異步回調
     useEffect(() => {},[setdrinkId])
-    console.log(datas);
-    if(thisURL=="https://team3-hosue-coffee-frontend-hd9bpbokx-shungyun89.vercel.app/onlinemenu"){
+
+    if(thisURL=="https://team3-hosue-coffee-frontend.vercel.app/onlinemenu"){
     return(
         <>
             {/* 印出資料 */}
@@ -62,7 +62,7 @@ const MenuCard = (props) => {
             })}
         </>   
     )  
-}else if(thisURL=="https://team3-hosue-coffee-frontend-hd9bpbokx-shungyun89.vercel.app/favorite"){
+}else if(thisURL=="https://team3-hosue-coffee-frontend.vercel.app/favorite"){
     return(
         <>
             {/* 印出資料 */}
