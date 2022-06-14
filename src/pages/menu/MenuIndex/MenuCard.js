@@ -8,11 +8,10 @@ const MenuCard = (props) => {
 
     const localFavDatas = JSON.parse(localStorage.getItem('favourite'))
     
-    const thisURL=location.href
+    const thisURL=window.location.pathname
     // 異步回調
     useEffect(() => {},[setdrinkId])
-
-    if(thisURL=="https://team3-hosue-coffee-frontend.vercel.app/onlinemenu"){
+    if(thisURL=="/onlinemenu"){
     return(
         <>
             {/* 印出資料 */}
@@ -62,7 +61,7 @@ const MenuCard = (props) => {
             })}
         </>   
     )  
-}else if(thisURL=="https://team3-hosue-coffee-frontend.vercel.app/favorite"){
+}else if(thisURL=="/favorite"){
     return(
         <>
             {/* 印出資料 */}
