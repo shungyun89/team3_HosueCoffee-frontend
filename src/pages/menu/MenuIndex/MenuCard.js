@@ -12,7 +12,7 @@ const MenuCard = (props) => {
     // 異步回調
     useEffect(() => {},[setdrinkId])
     console.log(datas);
-    if(thisURL=="http://localhost:3000/onlinemenu"){
+    if(thisURL=="https://team3-hosue-coffee-frontend-hd9bpbokx-shungyun89.vercel.app/onlinemenu"){
     return(
         <>
             {/* 印出資料 */}
@@ -62,7 +62,7 @@ const MenuCard = (props) => {
             })}
         </>   
     )  
-}else if(thisURL=="http://localhost:3000/favorite"){
+}else if(thisURL=="https://team3-hosue-coffee-frontend-hd9bpbokx-shungyun89.vercel.app/favorite"){
     return(
         <>
             {/* 印出資料 */}
