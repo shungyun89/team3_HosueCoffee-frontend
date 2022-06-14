@@ -8,7 +8,8 @@ const MenuCard = (props) => {
 
     const localFavDatas = JSON.parse(localStorage.getItem('favourite'))
     
-    const thisURL=window.location.pathname
+    let thisURL=window.location.pathname
+
     console.log(thisURL);
     // 異步回調
     useEffect(() => {},[setdrinkId])
