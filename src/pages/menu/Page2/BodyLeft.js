@@ -26,7 +26,7 @@ const BodyLeft = props => {
             .required("請輸入手機號碼"),
     });
     const totalprice = datas.totalprice
-    const postprice = fetch('http://localhost:3001/menu',{
+    const postprice = fetch('https://hosue-coffee-backend.herokuapp.com/menu',{
         method:'post',
         body:{totalprice}
         }
@@ -119,16 +119,18 @@ const BodyLeft = props => {
                         </Link>
                     </div>
                     <div className="d-flex justify-content-end mt-4">
-                        
+                        <Link to='https://hosue-coffee-backend.herokuapp.com/paymentaction'>            
                             <button 
                             className="PaymentLast mt-1" 
                             type="submit" 
-                            onClick={()=>{if (isSubmitting===true) {
-                                window.location.href="/OnlineCheckPage3"
-                            }}}
+                            // onClick={()=>{if (isSubmitting===true) {
+                            //     window.location.href="/OnlineCheckPage3"
+                            // }}}
+                            onClick={postprice}
                             >
                                 結帳
                             </button>
+                        </Link>
                     </div>
                 </div>
             </div>
