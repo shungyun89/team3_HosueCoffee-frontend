@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -6,6 +6,7 @@ import Storemap1 from '../component/Storemap1';
 import StoreCard from '../../store/StoreCard';
 import Area from '../component/area';
 import Areastore from '../component/areastore';
+import axios from 'axios';
 
 const BodyLeft = props => {
     
@@ -26,12 +27,15 @@ const BodyLeft = props => {
             .required("請輸入手機號碼"),
     });
     const totalprice = datas.totalprice
-    const postprice = async()=>{ fetch('https://hosue-coffee-backend.herokuapp.com/menu',{
-        method:'post',
-        body:{totalprice}
-        }
-        )
-        }
+    const postprice = async()=>{
+        await fetch('https://hosue-coffee-backend.herokuapp.com/paymentaction',
+        {method:'POST',
+        body:({totalprice})
+    })
+
+}
+useEffect(()=>{postprice();},[])
+   
     return(
         <>     
             <Formik
@@ -119,7 +123,7 @@ const BodyLeft = props => {
                         </Link>
                     </div>
                     <div className="d-flex justify-content-end mt-4">
-                        <Link to='https://hosue-coffee-backend.herokuapp.com/paymentaction'>            
+                        <Link to='/paymentaction'>            
                             <button 
                             className="PaymentLast mt-1" 
                             type="submit" 
