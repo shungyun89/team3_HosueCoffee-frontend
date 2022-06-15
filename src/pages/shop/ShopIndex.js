@@ -37,7 +37,7 @@ const[amount, setAmount]= useState(1)
 
      const fetchData = async()=>{
        //讀取本頁資料，並寫入datas
-       const response = await fetch('http://localhost:3001/shop');
+       const response = await fetch('https://hosue-coffee-backend.herokuapp.com/shop');
        const results = await response.json();
        setDatas(results);
 
@@ -57,7 +57,7 @@ const[amount, setAmount]= useState(1)
         }
         setDatasPMF(WISH)
          //讀取全部資料，並寫入data
-         const Aresponse = await fetch('http://localhost:3001/shop');
+         const Aresponse = await fetch('https://hosue-coffee-backend.herokuapp.com/shop');
          const Aresults = await Aresponse.json  ();
          setAllDatas(Aresults);
        }
