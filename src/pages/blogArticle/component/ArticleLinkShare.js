@@ -19,7 +19,7 @@ import instagramImg from '../img/share btn ig.svg'
 
 const ArticleLinkShare = (props) => {
   const {thisBid}=props
-  const shareUrl =`https://hosue-coffee-backend.herokuapp.com/blog/blogArticle?blog_id=${thisBid}`;
+  const shareUrl =`https://team3-hosue-coffee-frontend.vercel.app/blog/blogArticle?blog_id=${thisBid}`;
 
   
   return (
