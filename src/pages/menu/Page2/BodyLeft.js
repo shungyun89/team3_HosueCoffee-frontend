@@ -26,12 +26,12 @@ const BodyLeft = props => {
             .required("請輸入手機號碼"),
     });
     const totalprice = datas.totalprice
-    const postprice = fetch('https://hosue-coffee-backend.herokuapp.com/menu',{
+    const postprice = async()=>{ fetch('https://hosue-coffee-backend.herokuapp.com/menu',{
         method:'post',
         body:{totalprice}
         }
         )
-        
+        }
     return(
         <>     
             <Formik
