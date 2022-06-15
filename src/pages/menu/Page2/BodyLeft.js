@@ -25,8 +25,7 @@ const BodyLeft = props => {
             .max(10, "請輸入正確手機格式09XX-XXX-XXX")
             .required("請輸入手機號碼"),
     });
-
-
+    
     return(
         <>     
             <Formik
