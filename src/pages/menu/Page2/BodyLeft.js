@@ -25,7 +25,13 @@ const BodyLeft = props => {
             .max(10, "請輸入正確手機格式09XX-XXX-XXX")
             .required("請輸入手機號碼"),
     });
-    
+    const totalprice = datas.totalprice
+    const postprice = fetch('http://localhost:3001/menu',{
+        method:'post',
+        body:{totalprice}
+        }
+        )
+        
     return(
         <>     
             <Formik
