@@ -359,11 +359,11 @@ const[ newpoint , setNewpoint] = useState(0)
     // let[pricetotal1, setpricetotal1] = useState('')
     const [datas, setDatas ] = useState([])
     const fetchData = async()=>{    
-     const response = await fetch('http://localhost:3001/shop'); 
+     const response = await fetch('https://hosue-coffee-backend.herokuapp.com/shop'); 
      const results = await response.json();
                      setDatas(results);
 
-        const point = await fetch(`http://localhost:3001/shoporder/point?member_id=${thismemberid}`);
+        const point = await fetch(`https://hosue-coffee-backend.herokuapp.com/shoporder/point?member_id=${thismemberid}`);
         const repoint = await point.json();
         setMpoint(repoint.member_point);
         console.log(repoint.member_point);
