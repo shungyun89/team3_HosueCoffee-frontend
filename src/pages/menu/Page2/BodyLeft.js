@@ -127,10 +127,10 @@ useEffect(()=>{postprice();},[])
                             <button 
                             className="PaymentLast mt-1" 
                             type="submit" 
-                            // onClick={()=>{if (isSubmitting===true) {
-                            //     window.location.href="/OnlineCheckPage3"
-                            // }}}
-                            onClick={postprice}
+                            onClick={()=>{if (isSubmitting===true) {
+                                window.location.href="/OnlineCheckPage3"
+                            }}}
+                            // onClick={postprice}
                             >
                                 結帳
                             </button>
