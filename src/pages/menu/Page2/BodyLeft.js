@@ -1,19 +1,13 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import Storemap1 from '../component/Storemap1';
-import StoreCard from '../../store/StoreCard';
-import Area from '../component/area';
-import Areastore from '../component/areastore';
-import axios from 'axios';
+
 
 const BodyLeft = props => {
     
     let datas = props.datas1
-    const [area,setArea]=useState("請選擇");
-    const [astore,setAstore]=useState([]);
-    const [areastore,setAreastore]=useState([]);
+
 
     const phoneRegExp = /^09\d{2}-?\d{3}-?\d{3}$/
     const SignupSchema = Yup.object().shape({
@@ -26,16 +20,8 @@ const BodyLeft = props => {
             .max(10, "請輸入正確手機格式09XX-XXX-XXX")
             .required("請輸入手機號碼"),
     });
-    const totalprice = datas.totalprice
-    const postprice = async()=>{
-        await fetch('https://hosue-coffee-backend.herokuapp.com/paymentaction',
-        {method:'POST',
-        body:({totalprice})
-    })
 
-}
-useEffect(()=>{postprice();},[])
-   
+
     return(
         <>     
             <Formik
@@ -76,17 +62,83 @@ useEffect(()=>{postprice();},[])
                                         </div>
                             </div>
                             <div className="selectStore">
+                                <div className="hisstoryStoreName">
+                                    <span>上次訂餐門市</span>
+                                </div>
+                                <div className="hisstoryStore">
+                                    <div className="cardWrap">
+                                        <img src="../img/01.jpg" alt=""/>
+                                        <div className="itemText">
+                                            <p>長榮店</p>
+                                            <p>新北市 新店區中央路159號4F</p>
+                                            <p>02-412-8869</p>
+                                        </div>
+                                        <i className="fa-solid fa-circle-info"></i>
+                                    </div>
+                                </div>    
                                 <div>
                                     <span>選擇門市</span>
                                 </div>
-                                <Area 
-                                    area={area} 
-                                    setArea={setArea} 
-                                    areastore={areastore} 
-                                    setAreastore={setAreastore} 
-                                    astore={astore} 
-                                    setAstore={setAstore}/>
+                                <div className="Promo1">
+                                    <div className="Payment">
+                                        <p>選擇縣市</p>
+                                        <div className="sel sel--black-panther popo1">
+                                            <select name="select-profession" id="select-profession">
+                                                <option value="" disabled>選擇縣市</option>
+                                                <option value="hacker">測試</option>
+                                                <option value="gamer">測試</option>
+                                                <option value="developer">測試</option>
+                                                <option value="programmer">測試</option>
+                                                <option value="designer">測試</option>
+                                            </select>
+                                        </div>
+                                        <hr className="rule"/>
+                                    </div>
+                                </div>
+                                <div className="Promo1">
+                                    <div className="Payment">
+                                        <p>選擇地區</p>
+                                        <div className="sel sel--black-panther popo2">
+                                            <select name="select-profession" id="select-profession">
+                                                <option value="" disabled>選擇地區</option>
+                                                <option value="hacker">測試</option>
+                                                <option value="gamer">測試</option>
+                                                <option value="developer">測試</option>
+                                                <option value="programmer">測試</option>
+                                                <option value="designer">測試</option>
+                                            </select>
+                                        </div>
+                                        <hr className="rule"/>
+                                    </div>
+                                </div>
+                                <div className="Promo1">
+                                    <div className="Payment">
+                                        <p>選擇門市</p>
+                                        <div className="sel sel--black-panther">
+                                            <select name="select-profession" id="select-profession">
+                                                <option value="" disabled>選擇門市</option>
+                                                <option value="hacker">測試</option>
+                                                <option value="gamer">測試</option>
+                                                <option value="developer">測試</option>
+                                                <option value="programmer">測試</option>
+                                                <option value="designer">測試</option>
+                                            </select>
+                                        </div>
+                                        <hr className="rule"/>
+                                    </div>
+                                </div>
                             </div>
+                            <div className="store1">
+                                <div className="cardWrap">
+                                    <img src="../img/01.jpg" alt=""/>
+                                    <div className="itemText">
+                                        <p>長榮店</p>
+                                        <p>新北市 新店區中央路159號4F</p>
+                                        <p>02-412-8869</p>
+                                    </div>
+                                    <i className="fa-solid fa-circle-info"></i>
+                                </div>
+                            </div>    
                         </div>
                     </div> 
     <div className="body2">  
@@ -123,24 +175,23 @@ useEffect(()=>{postprice();},[])
                         </Link>
                     </div>
                     <div className="d-flex justify-content-end mt-4">
-                        <Link to='/paymentaction'>            
                             <button 
                             className="PaymentLast mt-1" 
                             type="submit" 
-                            // onClick={()=>{if (isSubmitting===true) {
-                            //     window.location.href="/OnlineCheckPage3"
-                            // }}}
-                            onClick={postprice}
+                            onClick={()=>{if (isSubmitting===true) {
+                                const greenGOGO="https://hosue-coffee-backend.herokuapp.com/payment/paymentaction"
+                                window.location.assign(greenGOGO);
+                                // window.location.href("")
+                            }}}
                             >
                                 結帳
                             </button>
-                        </Link>
                     </div>
                 </div>
             </div>
         </div>
-        </Form>
-        )}
+         </Form>
+         )}
     </Formik>
 </> 
 

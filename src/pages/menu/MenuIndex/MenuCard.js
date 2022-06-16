@@ -8,21 +8,21 @@ const MenuCard = (props) => {
 
     const localFavDatas = JSON.parse(localStorage.getItem('favourite'))
     
-    let thisURL=window.location.pathname
-
-    console.log(thisURL);
+    console.log(favdatas)
+    console.log(window.location.href)
+    const thisURL=window.location.href
     // 異步回調
     useEffect(() => {},[setdrinkId])
-    if(thisURL=="/onlinemenu"){
+    if(thisURL=="http://localhost:3000/onlinemenu"){
     return(
         <>
             {/* 印出資料 */}
             {datas.map((mu,i)=>{
                 // 儲存圖片路徑
-                const img1 = (mu.url)
+                const img1 = (mu.drink_name)
                 return(
                     <div 
-                        className="card drinkCard" 
+                        className="card" 
                         type="button" 
                         key={mu.id}  
                     >
@@ -30,7 +30,8 @@ const MenuCard = (props) => {
                             <div 
                                 className="imgdiv"
                                 onClick={()=>{
-                                    setdrinkId(mu.id)
+                                    setdrinkId((mu.id))
+                                    console.log(mu.id)
                                     setcss({
                                         visibility: 'visible',
                                         opacity:'1'
@@ -63,7 +64,7 @@ const MenuCard = (props) => {
             })}
         </>   
     )  
-}else if(thisURL=="/favorite"){
+}else if(thisURL=="http://localhost:3000/favorite"){
     return(
         <>
             {/* 印出資料 */}
@@ -72,7 +73,7 @@ const MenuCard = (props) => {
                 const img1 = (mu.drink_name)
                 return(
                     <div 
-                        className="card drinkCard" 
+                        className="card" 
                         type="button" 
                         key={mu.id}  
                     >
@@ -81,6 +82,7 @@ const MenuCard = (props) => {
                                 className="imgdiv"
                                 onClick={()=>{
                                     setdrinkId((mu.id))
+                                    console.log(mu.id)
                                     setcss({
                                         visibility: 'visible',
                                         opacity:'1'

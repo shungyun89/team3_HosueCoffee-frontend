@@ -1,25 +1,12 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 
 
 
 
 
-const Buyer = (props) => {
+const Buyer = () => (
 
 
-    const [datas, setDatas ] = useState([])
-    const fetchData = async()=>{
-                            const response = await fetch('http://localhost:3001/menu/oder');
-                            const results = await response.json();
-                            setDatas(results);
-                    }
-    useEffect(()=>{fetchData()
-    },[])
-
-
-console.log(datas);
-if(datas.length>0){
-    return(
         <div className="member2">
             <div>
                 <span>購買人資訊</span>
@@ -30,7 +17,7 @@ if(datas.length>0){
                         <span>姓名:</span>
                     </div>
                     <div>
-                        <span>{datas[0].orderer}</span>
+                        <span>羅志祥</span>
                     </div>
                 </div>
                 <div className="memberBodyIn">
@@ -38,7 +25,7 @@ if(datas.length>0){
                         <span>電話:</span>
                     </div>
                     <div>
-                        <span>{datas[0].phone}</span>
+                        <span>0912345678</span>
                     </div>
                 </div>
                 <div className="memberBodyIn">
@@ -46,13 +33,14 @@ if(datas.length>0){
                         <span>時間:</span>
                     </div>
                     <div>
-                        <span>{datas[0].odertime}</span>
+                        <span>1200</span>
                     </div>
                 </div>
             </div>
         </div>
+
+
 )
-    }
-}
+
 
 export default Buyer

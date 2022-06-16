@@ -9,19 +9,19 @@ import { BiCoffee } from "react-icons/bi";
 
 const MenuIndex = () => {
         // 抓到點擊菜單品項的id
-        const [drinkId, setdrinkId] = useState(300002)
+        const [drinkId, setdrinkId] = useState(2)
         //控制POPUP的CSS
         const [css,setcss] = useState()
         //從後端抓資料
         const [datas, setDatas ] = useState([])
         const fetchData = async()=>{
-                            const response = await fetch('https://hosue-coffee-backend.herokuapp.com/menu');
+                            const response = await fetch('http://localhost:3002/menu');
                             const results = await response.json();         
                                             setDatas(results);
         }
         useEffect(()=>{fetchData();},[])
         const datas1 = JSON.parse(localStorage.getItem('gifts'))
-        console.log(drinkId);
+
         return( 
             <>   
                 <div className="bodyMenu">
