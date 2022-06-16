@@ -181,7 +181,7 @@ const BodyLeft = props => {
                             onClick={()=>{if (isSubmitting===true) {
                                 const greenGOGO="https://hosue-coffee-backend.herokuapp.com/payment/paymentaction"
                                 window.location.assign(greenGOGO);
-                                // window.location.href("")
+                                
                             }}}
                             >
                                 結帳
